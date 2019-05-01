@@ -1,0 +1,16 @@
+version: '2'
+services:
+    nifi:
+        image: apache/nifi:1.9.1
+        ports:
+            - 9090:8080 # web port
+            - 15000:15000 # port for download service
+        volumes:
+            - ./test_files:/opt/test_files
+            - ./jdbc_driver:/opt/jdbc_driver
+    db:
+        image: postgres:11.2
+        volumes:
+            - ./db_init_scripts:/docker-entrypoint-initdb.d/ # create 2 tables and insert some data
+        ports:
+            - 5432:5432

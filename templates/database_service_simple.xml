@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description></description>
+    <groupId>586e645e-016a-1000-3738-ca853942b497</groupId>
+    <name>database_service_simple</name>
+    <snippet>
+        <processGroups>
+            <id>bcd830cd-b14a-34be-0000-000000000000</id>
+            <parentGroupId>0dc2579b-c9a7-3df1-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>ecba947d-6eb3-336b-0000-000000000000</id>
+                    <parentGroupId>bcd830cd-b14a-34be-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>bcd830cd-b14a-34be-0000-000000000000</groupId>
+                        <id>9e2288a9-e2e5-3e0c-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>bcd830cd-b14a-34be-0000-000000000000</groupId>
+                        <id>48ac892d-725f-3063-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <controllerServices>
+                    <id>902ebe35-d5e1-3b04-0000-000000000000</id>
+                    <parentGroupId>bcd830cd-b14a-34be-0000-000000000000</parentGroupId>
+                    <bundle>
+                        <artifact>nifi-dbcp-service-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.9.1</version>
+                    </bundle>
+                    <comments></comments>
+                    <descriptors>
+                        <entry>
+                            <key>Database Connection URL</key>
+                            <value>
+<name>Database Connection URL</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Database Driver Class Name</key>
+                            <value>
+<name>Database Driver Class Name</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>database-driver-locations</key>
+                            <value>
+<name>database-driver-locations</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>kerberos-credentials-service</key>
+                            <value>
+<identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+<name>kerberos-credentials-service</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Database User</key>
+                            <value>
+<name>Database User</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Password</key>
+                            <value>
+<name>Password</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Max Wait Time</key>
+                            <value>
+<name>Max Wait Time</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Max Total Connections</key>
+                            <value>
+<name>Max Total Connections</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Validation-query</key>
+                            <value>
+<name>Validation-query</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-min-idle-conns</key>
+                            <value>
+<name>dbcp-min-idle-conns</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-max-idle-conns</key>
+                            <value>
+<name>dbcp-max-idle-conns</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-max-conn-lifetime</key>
+                            <value>
+<name>dbcp-max-conn-lifetime</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-time-between-eviction-runs</key>
+                            <value>
+<name>dbcp-time-between-eviction-runs</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-min-evictable-idle-time</key>
+                            <value>
+<name>dbcp-min-evictable-idle-time</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-soft-min-evictable-idle-time</key>
+                            <value>
+<name>dbcp-soft-min-evictable-idle-time</name>
+                            </value>
+                        </entry>
+                    </descriptors>
+                    <name>DBCPConnectionPool</name>
+                    <persistsState>false</persistsState>
+                    <properties>
+                        <entry>
+                            <key>Database Connection URL</key>
+                            <value>jdbc:postgresql://db:5432/postgres</value>
+                        </entry>
+                        <entry>
+                            <key>Database Driver Class Name</key>
+                            <value>org.postgresql.Driver</value>
+                        </entry>
+                        <entry>
+                            <key>database-driver-locations</key>
+                            <value>/opt/jdbc_driver/postgresql-42.2.5.jar</value>
+                        </entry>
+                        <entry>
+                            <key>kerberos-credentials-service</key>
+                        </entry>
+                        <entry>
+                            <key>Database User</key>
+                            <value>postgres</value>
+                        </entry>
+                        <entry>
+                            <key>Password</key>
+                        </entry>
+                        <entry>
+                            <key>Max Wait Time</key>
+                            <value>500 millis</value>
+                        </entry>
+                        <entry>
+                            <key>Max Total Connections</key>
+                            <value>8</value>
+                        </entry>
+                        <entry>
+                            <key>Validation-query</key>
+                        </entry>
+                        <entry>
+                            <key>dbcp-min-idle-conns</key>
+                            <value>0</value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-max-idle-conns</key>
+                            <value>8</value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-max-conn-lifetime</key>
+                            <value>-1</value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-time-between-eviction-runs</key>
+                            <value>-1</value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-min-evictable-idle-time</key>
+                            <value>30 mins</value>
+                        </entry>
+                        <entry>
+                            <key>dbcp-soft-min-evictable-idle-time</key>
+                            <value>-1</value>
+                        </entry>
+                    </properties>
+                    <state>ENABLED</state>
+                    <type>org.apache.nifi.dbcp.DBCPConnectionPool</type>
+                </controllerServices>
+                <processors>
+                    <id>48ac892d-725f-3063-0000-000000000000</id>
+                    <parentGroupId>bcd830cd-b14a-34be-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>466.6617398850949</x>
+                        <y>41.00000012230717</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.9.1</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Database Connection Pooling Service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+    <name>Database Connection Pooling Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>db-fetch-db-type</key>
+<value>
+    <name>db-fetch-db-type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Table Name</key>
+<value>
+    <name>Table Name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Columns to Return</key>
+<value>
+    <name>Columns to Return</name>
+</value>
+                            </entry>
+                            <entry>
+<key>db-fetch-where-clause</key>
+<value>
+    <name>db-fetch-where-clause</name>
+</value>
+                            </entry>
+                            <entry>
+<key>db-fetch-sql-query</key>
+<value>
+    <name>db-fetch-sql-query</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum-value Columns</key>
+<value>
+    <name>Maximum-value Columns</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Max Wait Time</key>
+<value>
+    <name>Max Wait Time</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Fetch Size</key>
+<value>
+    <name>Fetch Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>qdbt-max-rows</key>
+<value>
+    <name>qdbt-max-rows</name>
+</value>
+                            </entry>
+                            <entry>
+<key>qdbt-output-batch-size</key>
+<value>
+    <name>qdbt-output-batch-size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>qdbt-max-frags</key>
+<value>
+    <name>qdbt-max-frags</name>
+</value>
+                            </entry>
+                            <entry>
+<key>dbf-normalize</key>
+<value>
+    <name>dbf-normalize</name>
+</value>
+                            </entry>
+                            <entry>
+<key>transaction-isolation-level</key>
+<value>
+    <name>transaction-isolation-level</name>
+</value>
+                            </entry>
+                            <entry>
+<key>dbf-user-logical-types</key>
+<value>
+    <name>dbf-user-logical-types</name>
+</value>
+                            </entry>
+                            <entry>
+<key>dbf-default-precision</key>
+<value>
+    <name>dbf-default-precision</name>
+</value>
+                            </entry>
+                            <entry>
+<key>dbf-default-scale</key>
+<value>
+    <name>dbf-default-scale</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>PRIMARY</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Database Connection Pooling Service</key>
+<value>902ebe35-d5e1-3b04-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>db-fetch-db-type</key>
+<value>Generic</value>
+                            </entry>
+                            <entry>
+<key>Table Name</key>
+<value>input_table</value>
+                            </entry>
+                            <entry>
+<key>Columns to Return</key>
+                            </entry>
+                            <entry>
+<key>db-fetch-where-clause</key>
+                            </entry>
+                            <entry>
+<key>db-fetch-sql-query</key>
+                            </entry>
+                            <entry>
+<key>Maximum-value Columns</key>
+                            </entry>
+                            <entry>
+<key>Max Wait Time</key>
+<value>0 seconds</value>
+                            </entry>
+                            <entry>
+<key>Fetch Size</key>
+<value>0</value>
+                            </entry>
+                            <entry>
+<key>qdbt-max-rows</key>
+<value>0</value>
+                            </entry>
+                            <entry>
+<key>qdbt-output-batch-size</key>
+<value>0</value>
+                            </entry>
+                            <entry>
+<key>qdbt-max-frags</key>
+<value>0</value>
+                            </entry>
+                            <entry>
+<key>dbf-normalize</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>transaction-isolation-level</key>
+                            </entry>
+                            <entry>
+<key>dbf-user-logical-types</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>dbf-default-precision</key>
+<value>10</value>
+                            </entry>
+                            <entry>
+<key>dbf-default-scale</key>
+<value>0</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>true</executionNodeRestricted>
+                    <name>QueryDatabaseTable</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.QueryDatabaseTable</type>
+                </processors>
+                <processors>
+                    <id>9e2288a9-e2e5-3e0c-0000-000000000000</id>
+                    <parentGroupId>bcd830cd-b14a-34be-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>469.5539517991574</x>
+                        <y>273.3494874269947</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.9.1</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>put-db-record-record-reader</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
+    <name>put-db-record-record-reader</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-statement-type</key>
+<value>
+    <name>put-db-record-statement-type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-dcbp-service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+    <name>put-db-record-dcbp-service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-catalog-name</key>
+<value>
+    <name>put-db-record-catalog-name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-schema-name</key>
+<value>
+    <name>put-db-record-schema-name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-table-name</key>
+<value>
+    <name>put-db-record-table-name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-translate-field-names</key>
+<value>
+    <name>put-db-record-translate-field-names</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-unmatched-field-behavior</key>
+<value>
+    <name>put-db-record-unmatched-field-behavior</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-unmatched-column-behavior</key>
+<value>
+    <name>put-db-record-unmatched-column-behavior</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-update-keys</key>
+<value>
+    <name>put-db-record-update-keys</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-field-containing-sql</key>
+<value>
+    <name>put-db-record-field-containing-sql</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-quoted-identifiers</key>
+<value>
+    <name>put-db-record-quoted-identifiers</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-quoted-table-identifiers</key>
+<value>
+    <name>put-db-record-quoted-table-identifiers</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-query-timeout</key>
+<value>
+    <name>put-db-record-query-timeout</name>
+</value>
+                            </entry>
+                            <entry>
+<key>rollback-on-failure</key>
+<value>
+    <name>rollback-on-failure</name>
+</value>
+                            </entry>
+                            <entry>
+<key>table-schema-cache-size</key>
+<value>
+    <name>table-schema-cache-size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-max-batch-size</key>
+<value>
+    <name>put-db-record-max-batch-size</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>put-db-record-record-reader</key>
+                            </entry>
+                            <entry>
+<key>put-db-record-statement-type</key>
+                            </entry>
+                            <entry>
+<key>put-db-record-dcbp-service</key>
+                            </entry>
+                            <entry>
+<key>put-db-record-catalog-name</key>
+                            </entry>
+                            <entry>
+<key>put-db-record-schema-name</key>
+                            </entry>
+                            <entry>
+<key>put-db-record-table-name</key>
+                            </entry>
+                            <entry>
+<key>put-db-record-translate-field-names</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-unmatched-field-behavior</key>
+<value>Ignore Unmatched Fields</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-unmatched-column-behavior</key>
+<value>Fail on Unmatched Columns</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-update-keys</key>
+                            </entry>
+                            <entry>
+<key>put-db-record-field-containing-sql</key>
+                            </entry>
+                            <entry>
+<key>put-db-record-quoted-identifiers</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-quoted-table-identifiers</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-query-timeout</key>
+<value>0 seconds</value>
+                            </entry>
+                            <entry>
+<key>rollback-on-failure</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>table-schema-cache-size</key>
+<value>100</value>
+                            </entry>
+                            <entry>
+<key>put-db-record-max-batch-size</key>
+<value>0</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>PutDatabaseRecord</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>retry</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.PutDatabaseRecord</type>
+                </processors>
+            </contents>
+            <name>database_service_simple</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>04/30/2019 16:11:19 UTC</timestamp>
+</template>

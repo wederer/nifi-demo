@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[user]
+	name = Wolfgang Ederer
+	email = wolfgangederer@gmail.com
+[remote "github"]
+	url = https://github.com/wederer/nifi-demo.git
+	fetch = +refs/heads/*:refs/remotes/github/*
