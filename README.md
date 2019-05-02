@@ -12,3 +12,8 @@ Nifi docker-compose file with demo templates
 2. load template in flow
 
 ![](template_import.gif)
+
+
+## How to start the templates
+
+TBD
