@@ -37,7 +37,7 @@ Nifi docker-compose file with demo templates
 
 ```json
 {
-	"filename: "first.jpg"
+	"filename": "first.jpg"
 }
 
 ```
