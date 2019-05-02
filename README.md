@@ -32,8 +32,7 @@ Nifi docker-compose file with demo templates
 1. in properties tab:  click arrow -> next to "StandardHttpConectMap" in row "HTTP Context Map"
 1. enable the "StandardHttpContextMap" Service by clicking the lightning icon on the right
 1. start all processors
-1. open curl/Postman/Insomnia and send the following json inside the body (other possible values ("second.jpg", "third.jpg") to localhost:15000/getFile:
-
+1. open curl/Postman/Insomnia and send the following json inside the body (other possible values: "second.jpg", "third.jpg") to localhost:15000/getFile:
 
 ```json
 {
