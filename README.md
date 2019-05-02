@@ -41,10 +41,10 @@ Nifi docker-compose file with demo templates
 
 ```
 
-*Note*: try to send another value such as "fourth.jpg" or "/etc/passwd" to see what happens
+*Note*: try to send another value such as "fourth.jpg" or "../../etc/passwd" to see what happens
 
 ## run full\_download\_service
 
 similar to other services
 
-*Note*: try to send another value such as "fourth.jpg" or "/etc/passwd" to see what happens
+*Note*: try to send another value such as "fourth.jpg" or "../../etc/passwd" to see what happens
