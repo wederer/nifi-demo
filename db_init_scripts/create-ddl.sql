@@ -4,10 +4,9 @@ CREATE TABLE input_table(
   name VARCHAR(50) NOT NULL CHECK (name <> '')
 );
 
-CREATE SEQUENCE output_serial;
-CREATE TABLE result_table(
-  id INTEGER PRIMARY KEY DEFAULT nextval('output_serial'),
-  some_name VARCHAR(50) NOT NULL CHECK (some_name <> '')
+CREATE TABLE output_table(
+  id INTEGER,
+  name VARCHAR(50) NOT NULL CHECK (name <> '')
 );
 
 
