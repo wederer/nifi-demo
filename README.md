@@ -1,4 +1,4 @@
-# nifi-demo
+# Apache Nifi Demo with example templates
 Nifi docker-compose file with demo templates
 
 ## How to start
